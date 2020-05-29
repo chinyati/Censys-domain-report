@@ -7,10 +7,6 @@ A python script to search for subdomains and IP addresses associated to a specif
 * Register an account (free) on https://censys.io/register
 * Browse to https://censys.io/account, and copy two environment variables with your API ID and API secret
 * Clone/Download the repository
-  
- ```
-  $ git clone https://github.com/chinyati/censys-domain-report.git
- ```
 * The copied Secret and API keys need to be added to config.ini file in source folder as below:
  ```
   [DEFAULT]
