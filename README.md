@@ -29,8 +29,9 @@ This is a python script hence the system/container should have python and pip in
 ![Second Image](https://github.com/chinyati/Censys-domain-report/blob/master/Images/search_ips.jpg)
 
 ## Usage
+This script is executed with domain name input entered. This was done so that the code could be streamline rather than have a class to capture input on domain name and also verify if the domain is valid. If a wrong domain name is entered errors occur or the code bring null values which needs to be fixed in future work. However for the requirement of the exercise the code can query subdomains and IP Addresses for the domain "thoughtmachine.net".
 ```
-usage: censys_domain_report.py domain
+usage: python domain_query.py domain
 
 positional arguments:
   domain                The domain to scan
