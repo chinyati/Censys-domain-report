@@ -30,6 +30,7 @@ This is a python script hence the system/container should have python and pip in
 
 The output shown above is saved to JSON files in a folder JSON_Reports found in the source folder of project. This is were the reports are stored and can be accessed from.
 An illustration of the JSON file is shown below:
+
 ![Second Image](https://github.com/chinyati/Censys-domain-report/blob/master/Images/IP_Json.jpg)
 
 ## Usage
