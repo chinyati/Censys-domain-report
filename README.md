@@ -26,7 +26,7 @@ A python script to search for subdomains and IP addresses associated to a specif
   $ pip install -r requirements.txt
  ```
 
-##How it works
+## How it works
 This is a python script hence the system/container should have python and pip installed and running. Below is a sample of how script works
 ```
 $ python domainQuery.py thoughtmachine.net         
