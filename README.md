@@ -29,7 +29,7 @@ A python script to search for subdomains and IP addresses associated to a specif
 ## How it works
 This is a python script hence the system/container should have python and pip installed and running. Below is how the script works
 
-![First Image](https://github.com/chinyati/Censys-domain-report/blob/master/Images/search_subdomains.jpg)]
+![First Image](https://github.com/chinyati/Censys-domain-report/blob/master/Images/search_subdomains.jpg)
 ![Second Image](https://github.com/chinyati/Censys-domain-report/blob/master/Images/search_ips.jpg)
 
 ## Usage
