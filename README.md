@@ -93,3 +93,4 @@ optional arguments:
 1.	A More interactive interface so that user can enter domain name from menu and have its validity checked to avoid executing script on domains with errors or non-existent.
 2.	Have clear Try-Catch exceptions to catch errors for a mistake in the config file or on a wrong domain name entry etc.
 3.	Web Interface that outputs the JSON files in a visual report format. Could also use CSV files that can then inputted into creation of charts.
+4.  Integrate the script with other Network forensics tools like Nmap so as to further analyse the IP addresses and subdomains.
