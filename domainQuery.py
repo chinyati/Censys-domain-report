@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import configparser
+import os
 from random import shuffle
 
 import censys.certificates
@@ -69,10 +70,12 @@ def output_subdomains(domain, subdomains):
     print('')
 
     # Saves the list of found subdomains to an output file
+    if not os.path.exists("./JSON_Reports/"):
+        os.makedirs("./JSON_Reports/")
     json_object = json.dumps(subdomains, indent=4)
-    with open("Subdomains_Report.json", "w") as outfile:
+    with open("./JSON_Reports/Subdomains_Report.json", "w") as outfile:
         outfile.write(json_object)
-        print('[#####] WROTE %d SUBDOMAINS to Subdomains_Report.json in source folder\n' % (len(subdomains)))
+        print('[#####] WROTE %d SUBDOMAINS to Subdomains_Report.json in JSON_Reports folder\n' % (len(subdomains)))
 
 
 def ipv4_query(domain, ipv4_fields):
@@ -87,10 +90,12 @@ def ipv4_query(domain, ipv4_fields):
             print(res_list)
 
     # Writing console output to Json file
+    if not os.path.exists("./JSON_Reports/"):
+        os.makedirs("./JSON_Reports/")
     json_object = json.dumps(res_list, indent=4)
-    with open("IP_Report.json", "w") as outfile:
+    with open("./JSON_Reports/IP_Report.json", "w") as outfile:
         outfile.write(json_object)
-        print('\n[#####] Wrote %d IP Addresses to IP_Report.json in source folder\n' % (len(res_list)))
+        print('\n[#####] Wrote %d IP Address(es) to IP_Report.json in JSON_Reports folder\n' % (len(res_list)))
 
 
 # Prints the list of found ip addresses to console
