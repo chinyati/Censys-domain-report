@@ -1,0 +1,10 @@
+[
+    {
+        "location.city": "London",
+        "location.country": "United Kingdom",
+        "ip": "178.128.34.63",
+        "location.country_code": "GB",
+        "autonomous_system.name": "DIGITALOCEAN-ASN",
+        "location.postal_code": "EC2V"
+    }
+]
