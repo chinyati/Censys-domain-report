@@ -7,10 +7,6 @@ A python script to search for subdomains and IP addresses associated to a specif
 * Register an account (free) on https://censys.io/register
 * Browse to https://censys.io/account, and copy two environment variables with your API ID and API secret
 * Clone/Download the repository
-  
- ```
-  $ git clone https://github.com/chinyati/censys-domain-report.git
- ```
 * The copied Secret and API keys need to be added to config.ini file in source folder as below:
  ```
   [DEFAULT]
@@ -27,59 +23,15 @@ A python script to search for subdomains and IP addresses associated to a specif
  ```
 
 ## How it works
-This is a python script hence the system/container should have python and pip installed and running. Below is a sample of how script works
-```
-$ python domainQuery.py thoughtmachine.net         
-  --------------------------------------------------------------------------------
-  1. Find the Subdomains associated with domain:
-  2. See the IP address(es) associated with domain:
-  3. Quit
-  --------------------------------------------------------------------------------
-  Enter choice:
-  1
-  [###] Querying Censys for subdomains associated with thoughtmachine.net
-  
-  [##] Found 22 unique subdomains for thoughtmachine.net
-  
-    - www.beingtechnologies.com
-    - www.prophecy-dev.thoughtmachine.net
-    - 10.3.0.1
-    - 10.0.0.50
-    - www.phabricator.thoughtmachine.net
-    - kubernetes.default.svc.cluster.local
-    - vpn.thomac.net
-    - phabricator.thoughtmachine.net
-    - openvpn.thomac.net
-    - kubernetes
-    - k8s-proto.thoughtmachine.net
-    - intranet.thoughtmachine.net
-    - beingtechnologies.com
-    - prophecy.thoughtmachine.net
-    - prophecy-dev.thoughtmachine.net
-    - kubernetes.default
-    - kubernetes.default.svc
-    - doge.thoughtmachine.net
-    - *.thoughtmachine.net
-    - www.prophecy.thoughtmachine.net
-    - thoughtmachine.net
-    - www.thoughtmachine.net
-  
-  [#####] WROTE 22 SUBDOMAINS to Subdomains_Report.json in source folder
-  
-  Enter choice:
-  2
-  [###] Querying Censys for IP addresses associated with thoughtmachine.net
-  
-  [{'location.city': 'London', 'location.country': 'United Kingdom', 'ip': '178.128.34.63', 'location.country_code': 'GB', 'autonomous_system.name': 'DIGITALOCEAN-ASN', 'location.postal_code': 'EC2V'}]
-  
-  [#####] Wrote 1 IP Addresses to IP_Report.json in source folder
+This is a python script hence the system/container should have python and pip installed and running. Below is how the script works
 
-Above is illustration of how the script works with subdomains and IP addresses printer to screen and saved to JSON files.
-```
+![First Image](https://github.com/chinyati/Censys-domain-report/blob/master/Images/search_subdomains.jpg)
+![Second Image](https://github.com/chinyati/Censys-domain-report/blob/master/Images/search_ips.jpg)
 
 ## Usage
+This script is executed with domain name input entered. This was done so that the code could be streamline rather than have a class to capture input on domain name and also verify if the domain is valid. If a wrong domain name is entered errors occur or the code bring null values which needs to be fixed in future work. However for the requirement of the exercise the code can query subdomains and IP Addresses for the domain "thoughtmachine.net".
 ```
-usage: censys_domain_report.py domain
+usage: python domain_query.py domain
 
 positional arguments:
   domain                The domain to scan
