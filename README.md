@@ -22,21 +22,10 @@ A python script to search for subdomains and IP addresses associated to a specif
   $ pip install -r requirements.txt
  ```
 
-## How it works
-This is a python script hence the system/container should have python and pip installed and running. Below is how the script works
-
-![First Image](https://github.com/chinyati/Censys-domain-report/blob/master/Images/search_subdomains.jpg)
-![Second Image](https://github.com/chinyati/Censys-domain-report/blob/master/Images/search_ips.jpg)
-
-The output shown above is saved to JSON files in a folder JSON_Reports found in the source folder of project. This is were the reports are stored and can be accessed from.
-An illustration of the JSON file is shown below:
-
-![Second Image](https://github.com/chinyati/Censys-domain-report/blob/master/Images/IP_Json.jpg)
-
 ## Usage
 This script is executed with domain name input entered. Currently if a non existent domain is entered excpetion errors are caught or   null values are swhon. A clear Try-Except will be used in future work and also allow for domain name to be entered within the display menu. However for the requirement of the exercise the code can query subdomains and IP Addresses for the domain "thoughtmachine.net".
 ```
-usage: python domain_query.py domain
+usage: $ python domain_query.py domain
 
 positional arguments:
   domain                The domain to scan

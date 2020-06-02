@@ -2,15 +2,12 @@
 
 import configparser
 import os
-from random import shuffle
 
 import censys.certificates
 import json
 import censys.ipv4
 import censys
-import sys
-import cli
-import time
+import argparse
 
 # Configuration file with Secret & API Id KEYS
 config = configparser.ConfigParser()
@@ -135,5 +132,11 @@ def ip(domain):
     ipv4_query(domain, ipv4_fields)
 
 
-args = cli.parser.parse_args()
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    'domain',
+    help='The domain to scan'
+)
+
+args = parser.parse_args()
 mainMenu(args.domain)
