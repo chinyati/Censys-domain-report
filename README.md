@@ -10,8 +10,8 @@ A python script to search for subdomains and IP addresses associated to a specif
 * The copied Secret and API keys need to be added to config.ini file in source folder as below:
  ```
   [DEFAULT]
-  CENSYS_API_ID = 0a00f434-1234-5678-910a-33cf162085e2
-  CENSYS_API_SECRET = aBcDe12fghijk7PBjmRnKadOL1eULExXYZ
+  CENSYS_API_ID = ####
+  CENSYS_API_SECRET = ####
 
   Note the above keys are samples and do not work. Add your own.
   ```
